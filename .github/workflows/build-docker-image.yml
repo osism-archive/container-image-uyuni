@@ -45,7 +45,7 @@ jobs:
         env:
           DOCKER_REGISTRY: ${{ secrets.DOCKER_REGISTRY }}
           VERSION: ${{ matrix.version }}
-          REPOSITORY: osism/uyuni
+          REPOSITORY: uyuni/uyuni
 
       - name: Push docker image
         run: |
@@ -53,5 +53,5 @@ jobs:
         env:
           DOCKER_REGISTRY: ${{ secrets.DOCKER_REGISTRY }}
           VERSION: ${{ matrix.version }}
-          REPOSITORY: osism/uyuni
+          REPOSITORY: uyuni/uyuni
         if: github.ref == 'refs/heads/main'

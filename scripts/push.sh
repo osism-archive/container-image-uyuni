@@ -7,7 +7,7 @@ set -x
 # REPOSITORY
 # VERSION
 
-DOCKER_REGISTRY=${DOCKER_REGISTRY:-quay.io}
+DOCKER_REGISTRY=${DOCKER_REGISTRY:-registry.osism.io}
 REVISION=$(git rev-parse HEAD)
 
 if [[ -n $DOCKER_REGISTRY ]]; then
