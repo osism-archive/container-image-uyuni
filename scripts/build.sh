@@ -22,8 +22,8 @@ if [[ -n $DOCKER_REGISTRY ]]; then
     REPOSITORY="$DOCKER_REGISTRY/$REPOSITORY"
 fi
 
-docker buildx build \
-    --load \
+buildah build-using-dockerfile \
+    --format docker \
     --build-arg "PYTHON_VERSION=$PYTHON_VERSION" \
     --build-arg "VERSION=$VERSION" \
     --tag "$REPOSITORY:$REVISION" \
