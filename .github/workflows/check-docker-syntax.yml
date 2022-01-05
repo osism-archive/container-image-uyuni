@@ -6,6 +6,8 @@ name: Check docker syntax
     paths:
       - Dockerfile
       - .github/workflows/check-docker-syntax.yml
+    branches:
+      - main
   pull_request:
     paths:
       - Dockerfile
